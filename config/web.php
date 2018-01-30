@@ -15,6 +15,10 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'uouZvcTv7e5ncUgZV3pU4Zvfpb6J8al_',
+            /* Configuracion para api rest */
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser'
+            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -51,6 +55,21 @@ $config = [
             ],
         ],
         */
+        'urlManager' => [
+            'class' => 'yii\web\UrlManager',
+            'showScriptName' => true,
+            'enablePrettyUrl' => true,
+            /* Asociación de controlador para API REST */
+            'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'profesiones',
+                    'tokens' => [
+                        '{id}' => '<id:\\w+>'
+                    ]
+                ]
+            ]
+        ]
     ],
     'params' => $params,
 ];
@@ -68,7 +87,7 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['*'],
     ];
 }
 
