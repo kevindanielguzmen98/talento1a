@@ -65,7 +65,7 @@ class PersonaController extends Controller
     public function actionCreate()
     {
         $model = new Personas();
-
+        var_dump(Yii::$app->request->post());
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->persona_id]);
         }

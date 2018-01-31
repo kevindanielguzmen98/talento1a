@@ -50,7 +50,7 @@ class Personas extends \yii\db\ActiveRecord
         return [
             'persona_id' => 'Persona ID',
             'nombre' => 'Nombre',
-            'profesion' => 'Profesion',
+            'profesion' => 'Profesión',
             'municipio' => 'Municipio',
             'correo_electronico' => 'Correo Electronico',
         ];

@@ -23,7 +23,7 @@ use yii\helpers\Url;
     <?= $form->field($model, 'correo_electronico')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
@@ -53,7 +53,7 @@ use yii\helpers\Url;
 	    },
 	    success: function(res) {
 	    	for(municipio in res) {
-	    		$('#personas-municipio').append(`<option value="${res[profesion].municipio_id}">${res[municipio].nombre}</option>`)
+	    		$('#personas-municipio').append(`<option value="${res[municipio].municipio_id}">${res[municipio].nombre}</option>`)
 	    	}
 	    }
 	})
