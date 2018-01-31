@@ -8,7 +8,7 @@ use yii\widgets\Breadcrumbs;
 
 $this->title = 'Actualizar: '.$model->nombre;
 $this->params['breadcrumbs'][] = ['label' => 'Personas', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->persona_id, 'url' => ['view', 'id' => $model->persona_id]];
+$this->params['breadcrumbs'][] = ['label' => $model->nombre, 'url' => ['view', 'id' => $model->nombre]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="personas-update">
