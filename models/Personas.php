@@ -32,7 +32,7 @@ class Personas extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nombre', 'profesion', 'municipio', 'correo_electronico'], 'required'],
+            [['nombre', 'profesion', 'municipio', 'correo_electronico', 'fecha_nacimiento'], 'required'],
             [['profesion', 'municipio'], 'default', 'value' => null],
             [['profesion', 'municipio'], 'integer'],
             [['nombre'], 'string', 'max' => 100],
