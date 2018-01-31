@@ -2,11 +2,13 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use app\models\Profesiones;
+use app\models\Municipios;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Personas */
 
-$this->title = $model->persona_id;
+$this->title = $model->nombre;
 $this->params['breadcrumbs'][] = ['label' => 'Personas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,11 +17,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->persona_id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->persona_id], [
+        <?= Html::a('Actualizar', ['update', 'id' => $model->persona_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Eliminar', ['delete', 'id' => $model->persona_id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Estas seguro de querer eliminar esta persona?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -28,10 +30,20 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'persona_id',
+            // 'persona_id',
             'nombre',
-            'profesion',
-            'municipio',
+            // 'profesion',
+            [
+                'label' => 'Profesión',
+                'attribute' => 'profesion_id',
+                'value' => Profesiones::findOne($model->profesion)->nombre
+            ],
+            // 'municipio',
+            [
+                'label' => 'Municipio',
+                'attribute' => 'municipio_id',
+                'value' => Municipios::findOne($model->municipio)->nombre
+            ],
             'correo_electronico',
         ],
     ]) ?>
