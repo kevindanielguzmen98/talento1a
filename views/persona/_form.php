@@ -11,28 +11,52 @@ use yii\helpers\Url;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
+<style>
+	.right-align {
+		float: right;
+	}
+</style>
+
 <div class="personas-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'nombre')->textInput(['maxlength' => true]) ?>
+    <div class="row">
+    	<div class="col-sm-12 col-md-6">
+    		<?= $form->field($model, 'nombre')->textInput(['maxlength' => true]) ?>
+    	</div>
+    	<div class="col-sm-12 col-md-6">
+    		<?= $form->field($model, 'profesion')->dropdownList([]) ?>
+    	</div>
+    </div>
 
-    <?= $form->field($model, 'profesion')->dropdownList([]) ?>
+    <div class="row">
+    	<div class="col-sm-12 col-md-6">
+    		<?= $form->field($model, 'municipio')->dropdownList([]) ?>	
+    	</div>
+    	<div class="col-sm-12 col-md-6">
+    		<?= $form->field($model, 'correo_electronico')->textInput(['maxlength' => true]) ?>
+    	</div>
+    </div>
 
-    <?= $form->field($model, 'municipio')->dropdownList([]) ?>
+    <div class="row">
+    	<div class="col-sm-12 col-md-6">
+    		<?= $form->field($model, 'fecha_nacimiento')->widget(DatePicker::className(), [
+				    'language' => 'es',
+				    'dateFormat' => 'yyyy-MM-dd',
+				    'options' => ['class' => 'form-control'],
+				    'value' => $model->fecha_nacimiento
+				]) 
+			?>
+    	</div>
+    </div>
 
-    <?= $form->field($model, 'correo_electronico')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'fecha_nacimiento')->widget(DatePicker::className(), [
-		    'language' => 'es',
-		    'dateFormat' => 'yyyy-MM-dd',
-		    'options' => ['class' => 'form-control'],
-		    'value' => $model->fecha_nacimiento
-		]) 
-	?>
-
-    <div class="form-group">
-        <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
+    <div class="row">
+    	<div class="col-sm-12">
+    		<div class="form-group">
+		        <?= Html::a( 'Cancelar', Url::to(['persona/index']), ['class' => 'btn btn-secundary right-align']); ?>&nbsp;<?= Html::submitButton('Guardar', ['class' => 'btn btn-success right-align']) ?>
+		    </div>
+    	</div>
     </div>
 
     <?php ActiveForm::end(); ?>
