@@ -37,6 +37,7 @@ class Personas extends \yii\db\ActiveRecord
             [['profesion', 'municipio'], 'integer'],
             [['nombre'], 'string', 'max' => 100],
             [['correo_electronico'], 'string', 'max' => 150],
+            [['fecha_nacimiento'], 'date', 'format' => 'php:Y-m-d'],
             [['municipio'], 'exist', 'skipOnError' => true, 'targetClass' => Municipios::className(), 'targetAttribute' => ['municipio' => 'municipio_id']],
             [['profesion'], 'exist', 'skipOnError' => true, 'targetClass' => Profesiones::className(), 'targetAttribute' => ['profesion' => 'profesion_id']],
         ];

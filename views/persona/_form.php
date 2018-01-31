@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use richardfan\widget\JSRegister;
+use yii\jui\DatePicker;
 use yii\helpers\Url;
 
 /* @var $this yii\web\View */
@@ -21,6 +22,14 @@ use yii\helpers\Url;
     <?= $form->field($model, 'municipio')->dropdownList([]) ?>
 
     <?= $form->field($model, 'correo_electronico')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'fecha_nacimiento')->widget(DatePicker::className(), [
+		    'language' => 'es',
+		    'dateFormat' => 'yyyy-MM-dd',
+		    'options' => ['class' => 'form-control'],
+		    'value' => $model->fecha_nacimiento
+		]) 
+	?>
 
     <div class="form-group">
         <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
