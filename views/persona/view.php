@@ -45,6 +45,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => Municipios::findOne($model->municipio)->nombre
             ],
             'correo_electronico',
+            [
+                'label' => 'Fecha nacimiento',
+                'attribute' => 'fecha_nacimiento'
+            ]
         ],
     ]) ?>
 
