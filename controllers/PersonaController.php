@@ -93,6 +93,7 @@ class PersonaController extends Controller
 
         return $this->render('update', [
             'model' => $model,
+            'token' => '2c9d03819c812114af72a6dbbbda54c4bf24a421a3c1179d2a8133296c667537'
         ]);
     }
 

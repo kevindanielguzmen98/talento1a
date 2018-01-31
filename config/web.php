@@ -67,6 +67,13 @@ $config = [
                     'tokens' => [
                         '{id}' => '<id:\\w+>'
                     ]
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'municipios',
+                    'tokens' => [
+                        '{id}' => '<id:\\w+>'
+                    ]
                 ]
             ]
         ]

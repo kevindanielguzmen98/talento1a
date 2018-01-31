@@ -18,7 +18,7 @@ use yii\helpers\Url;
 
     <?= $form->field($model, 'profesion')->dropdownList([]) ?>
 
-    <?= $form->field($model, 'municipio')->textInput() ?>
+    <?= $form->field($model, 'municipio')->dropdownList([]) ?>
 
     <?= $form->field($model, 'correo_electronico')->textInput(['maxlength' => true]) ?>
 
@@ -32,7 +32,7 @@ use yii\helpers\Url;
 
 <?php JSRegister::begin(); ?>
 <script>
-	/* Peticiones */
+	/* Peticiones ajax */
 	$.ajax({
 		url: '<?= Url::to(['profesiones/index']) ?>',
 		type: 'get',
@@ -42,6 +42,18 @@ use yii\helpers\Url;
 	    success: function(res) {
 	    	for(profesion in res) {
 	    		$('#personas-profesion').append(`<option value="${res[profesion].profesion_id}">${res[profesion].nombre}</option>`)
+	    	}
+	    }
+	})
+	$.ajax({
+		url: '<?= Url::to(['municipios/index']) ?>',
+		type: 'get',
+		headers: {
+	        'Authorization': 'Bearer ' + '<?= $token ?>'
+	    },
+	    success: function(res) {
+	    	for(municipio in res) {
+	    		$('#personas-municipio').append(`<option value="${res[profesion].municipio_id}">${res[municipio].nombre}</option>`)
 	    	}
 	    }
 	})
