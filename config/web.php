@@ -11,6 +11,12 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    /* Ajuste de controlador por defecto */
+    'defaultRoute' => 'persona',
+    /* Ajuste de lengujae por defecto */
+    'language' => 'es',
+    /* Ajuste nombre de la aplicacion */
+    'name' => 'Talento1a',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation

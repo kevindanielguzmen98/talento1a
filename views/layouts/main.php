@@ -28,13 +28,13 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-    // NavBar::begin([
-    //     'brandLabel' => Yii::$app->name,
-    //     'brandUrl' => Yii::$app->homeUrl,
-    //     'options' => [
-    //         'class' => 'navbar-inverse navbar-fixed-top',
-    //     ],
-    // ]);
+    NavBar::begin([
+        'brandLabel' => Yii::$app->name,
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+            'class' => 'navbar-inverse navbar-fixed-top',
+        ],
+    ]);
     // echo Nav::widget([
     //     'options' => ['class' => 'navbar-nav navbar-right'],
     //     'items' => [
@@ -55,7 +55,7 @@ AppAsset::register($this);
     //         )
     //     ],
     // ]);
-    // NavBar::end();
+    NavBar::end();
     ?>
 
     <div class="container">
