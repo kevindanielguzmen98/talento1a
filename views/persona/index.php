@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
+use yii\widgets\Breadcrumbs;
 use yii\grid\GridView;
 use app\models\Profesiones;
 use app\models\Municipios;
@@ -13,15 +14,32 @@ use app\models\Municipios;
 $this->title = 'Administración de personas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<style>
+    .margin-align {
+        margin-top: 15px;
+        float: right;
+    }
+</style>
 <div class="personas-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h2><?= Html::encode($this->title) ?></h2>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <br>
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
+        </div>
+    </div>
 
-    <p>
-        <?= Html::a('Nuevo', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
+    <div class="row">
+        <div class="col-xs-12">
+            <?= Html::a('Nuevo', ['create'], ['class' => 'btn btn-success margin-align']) ?>
+        </div>
+    </div>   
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,

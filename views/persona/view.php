@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\widgets\Breadcrumbs;
 use app\models\Profesiones;
 use app\models\Municipios;
 
@@ -14,7 +15,17 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="personas-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h2><?= Html::encode($this->title) ?></h2>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <br>
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
+        </div>
+    </div>
 
     <p>
         <?= Html::a('Actualizar', ['update', 'id' => $model->persona_id], ['class' => 'btn btn-primary']) ?>

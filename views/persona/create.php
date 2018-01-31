@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\widgets\Breadcrumbs;
 
 
 /* @var $this yii\web\View */
@@ -12,7 +13,17 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="personas-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h2><?= Html::encode($this->title) ?></h2>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <br>
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
+        </div>
+    </div>
 
     <?= $this->render('_form', [
         'model' => $model,
