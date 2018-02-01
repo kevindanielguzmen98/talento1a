@@ -1,0 +1,422 @@
+{
+    "app\\controllers\\MunicipiosController": {
+        "parentClass": "yii\\rest\\ActiveController",
+        "isAbstract": false,
+        "isFinal": false,
+        "interfaces": [],
+        "traits": [],
+        "subclasses": [],
+        "events": [],
+        "constants": [],
+        "authors": {
+            "Qiang Xue": "qiang.xue@gmail.com"
+        },
+        "methods": {
+            "behaviors": {
+                "isAbstract": false,
+                "isFinal": false,
+                "isStatic": false,
+                "visibility": "public",
+                "definedBy": "app\\controllers\\MunicipiosController",
+                "params": [],
+                "exceptions": [],
+                "return": null,
+                "returnType": null,
+                "returnTypes": null,
+                "isReturnByReference": false,
+                "phpDocContext": null,
+                "name": "behaviors",
+                "sourceFile": "controllers\/MunicipiosController.php",
+                "startLine": 25,
+                "endLine": 31,
+                "shortDescription": null,
+                "description": null,
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            }
+        },
+        "properties": {
+            "$modelClass": {
+                "visibility": "public",
+                "isStatic": false,
+                "type": null,
+                "types": null,
+                "defaultValue": "\"app\\models\\Municipios\"",
+                "getter": null,
+                "setter": null,
+                "definedBy": "app\\controllers\\MunicipiosController",
+                "phpDocContext": null,
+                "name": "$modelClass",
+                "sourceFile": "controllers\/MunicipiosController.php",
+                "startLine": 22,
+                "endLine": 22,
+                "shortDescription": null,
+                "description": null,
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            }
+        },
+        "namespace": "app\\controllers",
+        "phpDocContext": {},
+        "name": "app\\controllers\\MunicipiosController",
+        "sourceFile": "controllers\/MunicipiosController.php",
+        "startLine": 20,
+        "endLine": 33,
+        "shortDescription": "Component is the base class that provides the *property*, *event* and *behavior* features.",
+        "description": "",
+        "since": "2.0",
+        "deprecatedSince": null,
+        "deprecatedReason": null,
+        "tags": [
+            {}
+        ]
+    },
+    "app\\controllers\\PersonaController": {
+        "parentClass": "yii\\web\\Controller",
+        "isAbstract": false,
+        "isFinal": false,
+        "interfaces": [],
+        "traits": [],
+        "subclasses": [],
+        "events": [],
+        "constants": [],
+        "authors": [],
+        "methods": {
+            "behaviors": {
+                "isAbstract": false,
+                "isFinal": false,
+                "isStatic": false,
+                "visibility": "public",
+                "definedBy": "app\\controllers\\PersonaController",
+                "params": [],
+                "exceptions": [],
+                "return": null,
+                "returnType": null,
+                "returnTypes": null,
+                "isReturnByReference": false,
+                "phpDocContext": {},
+                "name": "behaviors",
+                "sourceFile": "controllers\/PersonaController.php",
+                "startLine": 20,
+                "endLine": 30,
+                "shortDescription": "",
+                "description": "",
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": [
+                    {}
+                ]
+            },
+            "actionIndex": {
+                "isAbstract": false,
+                "isFinal": false,
+                "isStatic": false,
+                "visibility": "public",
+                "definedBy": "app\\controllers\\PersonaController",
+                "params": [],
+                "exceptions": [],
+                "return": "",
+                "returnType": "mixed",
+                "returnTypes": [
+                    "mixed"
+                ],
+                "isReturnByReference": false,
+                "phpDocContext": {},
+                "name": "actionIndex",
+                "sourceFile": "controllers\/PersonaController.php",
+                "startLine": 36,
+                "endLine": 45,
+                "shortDescription": "Lists all Personas models.",
+                "description": "",
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            },
+            "actionView": {
+                "isAbstract": false,
+                "isFinal": false,
+                "isStatic": false,
+                "visibility": "public",
+                "definedBy": "app\\controllers\\PersonaController",
+                "params": {
+                    "$id": {
+                        "name": "$id",
+                        "typeHint": "",
+                        "isOptional": false,
+                        "defaultValue": null,
+                        "isPassedByReference": false,
+                        "description": "",
+                        "type": "integer",
+                        "types": [
+                            "integer"
+                        ],
+                        "sourceFile": "controllers\/PersonaController.php"
+                    }
+                },
+                "exceptions": {
+                    "\\yii\\web\\NotFoundHttpException": "if the model cannot be found"
+                },
+                "return": "",
+                "returnType": "mixed",
+                "returnTypes": [
+                    "mixed"
+                ],
+                "isReturnByReference": false,
+                "phpDocContext": {},
+                "name": "actionView",
+                "sourceFile": "controllers\/PersonaController.php",
+                "startLine": 53,
+                "endLine": 58,
+                "shortDescription": "Displays a single Personas model.",
+                "description": "",
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            },
+            "actionCreate": {
+                "isAbstract": false,
+                "isFinal": false,
+                "isStatic": false,
+                "visibility": "public",
+                "definedBy": "app\\controllers\\PersonaController",
+                "params": [],
+                "exceptions": [],
+                "return": "",
+                "returnType": "mixed",
+                "returnTypes": [
+                    "mixed"
+                ],
+                "isReturnByReference": false,
+                "phpDocContext": {},
+                "name": "actionCreate",
+                "sourceFile": "controllers\/PersonaController.php",
+                "startLine": 65,
+                "endLine": 76,
+                "shortDescription": "Creates a new Personas model.",
+                "description": "If creation is successful, the browser will be redirected to the 'view' page.",
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            },
+            "actionUpdate": {
+                "isAbstract": false,
+                "isFinal": false,
+                "isStatic": false,
+                "visibility": "public",
+                "definedBy": "app\\controllers\\PersonaController",
+                "params": {
+                    "$id": {
+                        "name": "$id",
+                        "typeHint": "",
+                        "isOptional": false,
+                        "defaultValue": null,
+                        "isPassedByReference": false,
+                        "description": "",
+                        "type": "integer",
+                        "types": [
+                            "integer"
+                        ],
+                        "sourceFile": "controllers\/PersonaController.php"
+                    }
+                },
+                "exceptions": {
+                    "\\yii\\web\\NotFoundHttpException": "if the model cannot be found"
+                },
+                "return": "",
+                "returnType": "mixed",
+                "returnTypes": [
+                    "mixed"
+                ],
+                "isReturnByReference": false,
+                "phpDocContext": {},
+                "name": "actionUpdate",
+                "sourceFile": "controllers\/PersonaController.php",
+                "startLine": 85,
+                "endLine": 97,
+                "shortDescription": "Updates an existing Personas model.",
+                "description": "If update is successful, the browser will be redirected to the 'view' page.",
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            },
+            "actionDelete": {
+                "isAbstract": false,
+                "isFinal": false,
+                "isStatic": false,
+                "visibility": "public",
+                "definedBy": "app\\controllers\\PersonaController",
+                "params": {
+                    "$id": {
+                        "name": "$id",
+                        "typeHint": "",
+                        "isOptional": false,
+                        "defaultValue": null,
+                        "isPassedByReference": false,
+                        "description": "",
+                        "type": "integer",
+                        "types": [
+                            "integer"
+                        ],
+                        "sourceFile": "controllers\/PersonaController.php"
+                    }
+                },
+                "exceptions": {
+                    "\\yii\\web\\NotFoundHttpException": "if the model cannot be found"
+                },
+                "return": "",
+                "returnType": "mixed",
+                "returnTypes": [
+                    "mixed"
+                ],
+                "isReturnByReference": false,
+                "phpDocContext": {},
+                "name": "actionDelete",
+                "sourceFile": "controllers\/PersonaController.php",
+                "startLine": 106,
+                "endLine": 111,
+                "shortDescription": "Deletes an existing Personas model.",
+                "description": "If deletion is successful, the browser will be redirected to the 'index' page.",
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            },
+            "findModel": {
+                "isAbstract": false,
+                "isFinal": false,
+                "isStatic": false,
+                "visibility": "protected",
+                "definedBy": "app\\controllers\\PersonaController",
+                "params": {
+                    "$id": {
+                        "name": "$id",
+                        "typeHint": "",
+                        "isOptional": false,
+                        "defaultValue": null,
+                        "isPassedByReference": false,
+                        "description": "",
+                        "type": "integer",
+                        "types": [
+                            "integer"
+                        ],
+                        "sourceFile": "controllers\/PersonaController.php"
+                    }
+                },
+                "exceptions": {
+                    "\\yii\\web\\NotFoundHttpException": "if the model cannot be found"
+                },
+                "return": "The loaded model",
+                "returnType": "\\app\\models\\Personas",
+                "returnTypes": [
+                    "\\app\\models\\Personas"
+                ],
+                "isReturnByReference": false,
+                "phpDocContext": {},
+                "name": "findModel",
+                "sourceFile": "controllers\/PersonaController.php",
+                "startLine": 120,
+                "endLine": 127,
+                "shortDescription": "Finds the Personas model based on its primary key value.",
+                "description": "If the model is not found, a 404 HTTP exception will be thrown.",
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            }
+        },
+        "properties": [],
+        "namespace": "app\\controllers",
+        "phpDocContext": {},
+        "name": "app\\controllers\\PersonaController",
+        "sourceFile": "controllers\/PersonaController.php",
+        "startLine": 15,
+        "endLine": 128,
+        "shortDescription": "PersonaController implements the CRUD actions for Personas model.",
+        "description": "",
+        "since": null,
+        "deprecatedSince": null,
+        "deprecatedReason": null,
+        "tags": []
+    },
+    "app\\controllers\\ProfesionesController": {
+        "parentClass": "yii\\rest\\ActiveController",
+        "isAbstract": false,
+        "isFinal": false,
+        "interfaces": [],
+        "traits": [],
+        "subclasses": [],
+        "events": [],
+        "constants": [],
+        "authors": [],
+        "methods": {
+            "behaviors": {
+                "isAbstract": false,
+                "isFinal": false,
+                "isStatic": false,
+                "visibility": "public",
+                "definedBy": "app\\controllers\\ProfesionesController",
+                "params": [],
+                "exceptions": [],
+                "return": null,
+                "returnType": null,
+                "returnTypes": null,
+                "isReturnByReference": false,
+                "phpDocContext": null,
+                "name": "behaviors",
+                "sourceFile": "controllers\/ProfesionesController.php",
+                "startLine": 12,
+                "endLine": 18,
+                "shortDescription": null,
+                "description": null,
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            }
+        },
+        "properties": {
+            "$modelClass": {
+                "visibility": "public",
+                "isStatic": false,
+                "type": null,
+                "types": null,
+                "defaultValue": "\"app\\models\\Profesiones\"",
+                "getter": null,
+                "setter": null,
+                "definedBy": "app\\controllers\\ProfesionesController",
+                "phpDocContext": null,
+                "name": "$modelClass",
+                "sourceFile": "controllers\/ProfesionesController.php",
+                "startLine": 9,
+                "endLine": 9,
+                "shortDescription": null,
+                "description": null,
+                "since": null,
+                "deprecatedSince": null,
+                "deprecatedReason": null,
+                "tags": []
+            }
+        },
+        "namespace": "app\\controllers",
+        "phpDocContext": null,
+        "name": "app\\controllers\\ProfesionesController",
+        "sourceFile": "controllers\/ProfesionesController.php",
+        "startLine": 7,
+        "endLine": 20,
+        "shortDescription": null,
+        "description": null,
+        "since": null,
+        "deprecatedSince": null,
+        "deprecatedReason": null,
+        "tags": []
+    }
+}

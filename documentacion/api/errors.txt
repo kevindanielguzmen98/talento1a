@@ -1,0 +1,10 @@
+Array
+(
+    [0] => Array
+        (
+            [line] => 20
+            [file] => controllers/PersonaController.php
+            [message] => Method behaviors has no parent to inherit from in app\controllers\PersonaController.
+        )
+
+)
